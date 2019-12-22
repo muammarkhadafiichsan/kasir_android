@@ -1751,7 +1751,7 @@ abstract class REST_Controller extends \CI_Controller {
      * @param string $password The password to validate
      * @return bool
      */
-    protected function _perform_ldap_auth($username = '', $password = NULL, $ldaphost)
+    protected function _perform_ldap_auth($username = '', $password = NULL)
     {
         if (empty($username))
         {
