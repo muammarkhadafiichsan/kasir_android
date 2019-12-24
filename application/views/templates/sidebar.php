@@ -11,7 +11,7 @@
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-user-cog"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Admin</div>
+                <div class="sidebar-brand-text mx-3">Kopi Pojok</div>
             </a>
 
             <!-- Divider -->

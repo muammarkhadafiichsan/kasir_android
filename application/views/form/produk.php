@@ -1,46 +1,47 @@
 <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
+  
+    <div class="form-group col-md-2 ml-3">
+      <label for="inputId">Id</label>
+      <input type="id" class="form-control" id="inputId" placeholder="Id produk">
     </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4">
+
+<div class="form-row">
+    <div class="form-group col-md-5 ml-4">
+      <label for="inputNama">Nama Produk</label>
+      <input type="text" class="form-control" id="inputNama" placeholder="Nama Produk">
+    </div>
+
+  
+  <div class="form-group col-md-5 ml-4">
+    <label for="inputHarga1">Harga Modal</label>
+    <input type="text" class="form-control" id="inputHarga1" placeholder="Harga Modal">
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-group col-md-5 ml-4">
+    <label for="inputHarga2">Harga Jual</label>
+    <input type="text" class="form-control" id="inputHarga2" placeholder="Harga Jual">
+  </div>
+
+  <div class="form-group col-md-5 ml-4">
+    <label for="inputGambar">Gambar</label>
+    <div class="custom-file">
+    <input type="file" class="custom-file-input" id="customFile">
+    <label class="custom-file-label" for="customFile">Pilih File</label>
     </div>
   </div>
-  <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+</div>
+
+ <div class="form-group col-md-5 ml-2">
+  <label for="inputGambar">Kategori</label>
+  <select class="custom-select">
+  <option selected>Kategori</option>
+  <option value="1">Makanan</option>
+  <option value="2">Minuman</option>
+  </select>
+ </div>
+
+  <button type="submit" class="btn btn-primary ml-4">Simpan</button>
+
 </form>
