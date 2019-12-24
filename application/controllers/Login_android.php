@@ -48,7 +48,7 @@ class Login_android extends REST_Controller
         }*/
         if ($cek) {
             $output['Id'] = $cek['Id'];
-            $output['name'] = $cek['name'];
+            $output['username'] = $cek['username'];
             $output['password'] = $password;
 
 
