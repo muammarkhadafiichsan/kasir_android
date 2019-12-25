@@ -27,7 +27,7 @@ class Login_android extends REST_Controller
     {
         $result = $this->m_login->cek_login($username, $password);
         if ($result) {
-            $this->response(array('status' => 'oke', 'Id' => $result['Id'], $result, 200));
+            $this->response(array('status' => 'oke', 'id' => $result['id'], $result, 200));
         } else {
             $this->response(array('status' => 'fail', 502));
         }
@@ -47,7 +47,7 @@ class Login_android extends REST_Controller
             $this->response(array('status'=> 'oke','id'=>$cek['id_user']));
         }*/
         if ($cek) {
-            $output['Id'] = $cek['Id'];
+            $output['id'] = $cek['id'];
             $output['username'] = $cek['username'];
             $output['password'] = $password;
 
