@@ -51,7 +51,8 @@ class Produk extends CI_Controller
 			'nama_produk' => $nama_produk,
 			'harga_modal' => $harga_modal,
 			'harga_jual' => $harga_jual,
-			'gambar' => $gambar
+			'gambar' => $gambar,
+			'id_kategori' => $id_kategori
 
 		);
 
