@@ -29,15 +29,26 @@
     </div>
   </div>
 
-  <div class="form-group col-md-5 ml-2">
-    <label for="inputGambar">Kategori</label>
-    <select class="custom-select">
-      <option selected>Kategori</option>
-      <option value="1">Makanan</option>
-      <option value="2">Minuman</option>
+
+  <label class="col-sm-2 ml-3 col-form-label">Kategori Produk</label>
+  <div class="col-sm-10 ml-3">
+    <select class="form-control m-b" name="id_kategori" id="id_kategori">
+      <option value="">--Pilih Kategori--</option>
+      <?php
+      $servername = "localhost";
+      $database = "kasir_android";
+      $username = "root";
+      $password = "";
+      $conn = mysqli_connect($servername, $username, $password, $database);
+      $sql_akses = mysqli_query($conn, "SELECT * FROM kategori_produk") or die(mysqli_error($conn));
+      while ($data_akses = mysqli_fetch_array($sql_akses)) {
+        echo '<option value="' . $data_akses['id_kategori'] . '">' . $data_akses['kategori'] . '</option>';
+      }
+      ?>
     </select>
   </div>
 
-  <button type="submit" class="btn btn-primary ml-4">Simpan</button>
+
+  <button type="submit" class="btn btn-primary ml-4 mt-3">Simpan</button>
 
 </form>
