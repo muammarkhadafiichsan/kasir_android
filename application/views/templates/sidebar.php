@@ -63,5 +63,21 @@
                     </div>
                 </div>
             </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">
+                    <i class="fas fa-fw fa-key"></i>
+                    <span>Reset Password</span>
+                </a>
+                <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Password:</h6>
+                        <a class="collapse-item" href="<?= base_url('Resetpass');
+                                                    '/index' ?>">Ganti Password</a>
+                    </div>
+                </div>
+            </li>
+
         </ul>
         <!-- End of Sidebar -->
