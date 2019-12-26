@@ -28,12 +28,13 @@ class Produk extends CI_Controller
 		$nama_produk = $this->input->post('nama_produk');
 		$harga_modal = $this->input->post('harga_modal');
 		$harga_jual = $this->input->post('harga_jual');
+		$id_kategori = $this->input->post('id_kategori');
 
 
 		$gambar = $_FILES['gambar']['name'];
 		if ($gambar = '') {
 		} else {
-			$config['upload_path'] =  './assets/upload';
+			$config['upload_path'] =  './assets/img';
 			$config['allowed_types'] = 'jpg|jpeg|png|gif';
 			$config['file_name']     = $_FILES['gambar']['name'];
 			$config['max_size']      = 9048; // 9mb
@@ -50,7 +51,8 @@ class Produk extends CI_Controller
 			'nama_produk' => $nama_produk,
 			'harga_modal' => $harga_modal,
 			'harga_jual' => $harga_jual,
-			'gambar' => $gambar
+			'gambar' => $gambar,
+			'id_kategori' => $id_kategori
 
 		);
 
