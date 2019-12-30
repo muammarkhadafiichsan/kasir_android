@@ -18,7 +18,7 @@ class keranjang extends REST_Controller
 
     function index_get()
     {
-        $data = $this->db->get('tb_keranjang')->result();
+        $data = $this->db->get('keranjang')->result();
         $this->response(array("result" => $data, 200));
     }
     function index_post()
@@ -29,12 +29,12 @@ class keranjang extends REST_Controller
             'nama_produk' => $this->post('nama_produk'),
             'gambar'    => $this->post('gambar'),
             'jumlah'    => $this->post('jumlah'),
-            'harga_satuan'    => $this->post('harga_satuan'),
+            'harga_jual'    => $this->post('harga_jual'),
             'sub_total'    => $this->post('sub_total'),
-            'nama_pelanggan'    => $this->post('nama_pelanggan'),
-            'no_meja'    => $this->post('no_meja')
+            'nama_pelanggan'    => $this->post('nama_pelanggan')
+
         );
-        $insert = $this->db->insert('tb_keranjang', $data);
+        $insert = $this->db->insert('keranjang', $data);
         if ($insert) {
             $this->response($data, 200);
         } else {
@@ -53,7 +53,7 @@ class keranjang extends REST_Controller
         $id_produk = $this->delete('id_produk');
         $this->db->where('id_transaksi', $id_trans);
         $this->db->where('id_produk', $id_produk);
-        $delete = $this->db->delete('tb_keranjang');
+        $delete = $this->db->delete('keranjang');
         if ($delete) {
             $this->response(array('status' => 'success'), 201);
         } else {
