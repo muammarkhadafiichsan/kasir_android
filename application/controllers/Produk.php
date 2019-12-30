@@ -24,7 +24,7 @@ class Produk extends CI_Controller
 
 	public function tambah_produk()
 	{
-		$Id = $this->input->post('Id');
+		$id_produk = $this->input->post('id_produk');
 		$nama_produk = $this->input->post('nama_produk');
 		$harga_modal = $this->input->post('harga_modal');
 		$harga_jual = $this->input->post('harga_jual');
@@ -47,7 +47,7 @@ class Produk extends CI_Controller
 			}
 		}
 		$data = array(
-			'Id' => $Id,
+			'id_produk' => $id_produk,
 			'nama_produk' => $nama_produk,
 			'harga_modal' => $harga_modal,
 			'harga_jual' => $harga_jual,
@@ -71,7 +71,7 @@ class Produk extends CI_Controller
 
 	public function edit($Id)
 	{
-		$where = array('Id' => $Id);
+		$where = array('id_produk' => $Id);
 		$data['produk'] = $this->Model_produk->edit_produk($where, 'produk')->result();
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
@@ -81,7 +81,7 @@ class Produk extends CI_Controller
 
 	public function update()
 	{
-		$Id = $this->input->post('Id');
+		$Id = $this->input->post('id_produk');
 		$nama_produk = $this->input->post('nama_produk');
 		$harga_modal = $this->input->post('harga_modal');
 		$harga_jual = $this->input->post('harga_jual');

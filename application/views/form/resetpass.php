@@ -1,26 +1,26 @@
-<form action="<?= base_url() . 'Resetpass/reset_pass' ?>" method="post" enctype="multipart/form-data">
+<div class="row">
+  <div class="col-lg-6 ml-3">
+    <?= $this->session->flashdata('message'); ?>
+    <form action="<?= base_url('login/changepassword'); ?>" method="post">
+      <div class="form-group">
+        <label for="current_password">Current Password</label>
+        <input type="password" class="form-control" id="current_password" name="current_password">
+        <?= form_error('current_password', '<small class="text-danger pl-3">', '</small>'); ?>
+      </div>
+      <div class="form-group">
+        <label for="new_password1">New Password</label>
+        <input type="password" class="form-control" id="new_password1" name="new_password1">
+        <?= form_error('new_password1', '<small class="text-danger pl-3">', '</small>'); ?>
+      </div>
+      <div class="form-group">
+        <label for="new_password2">Repeat Password</label>
+        <input type="password" class="form-control" id="new_password2" name="new_password2">
+        <?= form_error('new_password2', '<small class="text-danger pl-3">', '</small>'); ?>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Change Password</button>
+      </div>
+    </form>
 
-
-
-    <div class="form-group col-md-5 ml-3">
-      <label for="inputNama">Password Lama</label>
-      <input type="text" class="form-control" name="user_name" id="inputNama" placeholder="Masukkan password lama">
-    </div>
-
-
-    <div class="form-group col-md-5 ml-3">
-      <label for="inputNoHP">Password Baru</label>
-      <input type="text" class="form-control" name="No_HP" id="inputNoHP" placeholder="Masukkan password baru">
-    </div>
-
-
-
-  <div class="form-group col-md-5 ml-3">
-      <label for="inputPass2">Konfirmasi Password</label>
-      <input type="text" class="form-control" name="pass_2" id="inputPass2" placeholder="Konfirmasi Password">
-    </div>
-
-
-  <button type="submit" class="btn btn-primary ml-4">Simpan</button>
-
-</form>
+  </div>
+</div>
