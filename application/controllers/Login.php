@@ -6,9 +6,6 @@ class Login extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-
-
-
         $this->load->model("Model_login");
     }
 
@@ -23,16 +20,16 @@ class Login extends CI_Controller
             $username = $this->input->post('username');
             $password = $this->input->post('password');
 
-            $login_admin = $this->db->get_where('login_admin', ['username' => $username])->row_array();
+            $login = $this->db->get_where('login_admin', ['username' => $username])->row_array();
 
 
-            if ($login_admin) {
+            if ($login) {
                 //cek password
 
-                if (password_verify($password, $login_admin['password'])) {
+                if (password_verify($password, $login['password'])) {
                     $data = [
-                        'username' => $login_admin['username'],
-                        'role_id' => $login_admin['role_id']
+                        'username' => $login['username'],
+                        'role_id' => $login['role_id'],
 
                     ];
                     $this->session->set_userdata($data);
@@ -42,7 +39,7 @@ class Login extends CI_Controller
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                         username atau password belum terdaftar 
                    </div>');
-                    redirect('login/index');
+                    redirect('Login');
                 }
             }
         }

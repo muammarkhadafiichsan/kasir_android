@@ -18,9 +18,9 @@
     <div class="form-group col-md-5 ml-4">
       <label for="inputPass1">Password</label>
       <input type="text" class="form-control" name="pass_1" id="inputPass1" placeholder="Password">
-  </div>
+    </div>
 
-  <div class="form-group col-md-5 ml-4">
+    <div class="form-group col-md-5 ml-4">
       <label for="inputPass2">Konfirmasi Password</label>
       <input type="text" class="form-control" name="pass_2" id="inputPass2" placeholder="Konfirmasi Password">
     </div>

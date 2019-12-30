@@ -33,7 +33,7 @@ class Registrasi extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
            Data Berhasil ditambahkan, silahkan login!
           </div>');
-            redirect('login/index');
+            redirect('Login');
         }
     }
 }
